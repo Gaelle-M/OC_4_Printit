@@ -29,6 +29,9 @@ function bulletActive() {
     bannerImg.src = `./assets/images/slideshow/${currentSlide.image}`;
     bannerImg.alt = currentSlide.tagLine;
 
+	const taglineElement = document.querySelector('.tagline');
+	taglineElement.innerHTML = currentSlide.tagLine;
+
     const dots = document.querySelectorAll('.dot');
     dots.forEach((dot, index) => {
         dot.classList.remove('dot_selected');
