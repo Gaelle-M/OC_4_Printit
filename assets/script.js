@@ -1,3 +1,14 @@
+const bannerImg = document.querySelector('.banner-img');
+const arrowLeft = document.querySelector('.arrow_left');
+const arrowRight = document.querySelector('.arrow_right');
+
+arrowLeft.addEventListener("click", () => {
+    console.log("Vous avez cliqué sur la flèche gauche")
+});
+arrowRight.addEventListener("click", () => {
+    console.log("Vous avez cliqué sur la flèche droite")
+});
+
 const slides = [
 	{
 		"image":"slide1.jpg",
