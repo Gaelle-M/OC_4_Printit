@@ -24,7 +24,7 @@ const slides = [
 
 let currentIndex = 0;
 
-function bulletActive() {
+function carouselActive() {
     const currentSlide = slides[currentIndex];
     bannerImg.src = `./assets/images/slideshow/${currentSlide.image}`;
     bannerImg.alt = currentSlide.tagLine;
@@ -47,7 +47,7 @@ for (let i = 0; i < slides.length; i++) {
     
     dot.addEventListener('click', () => {
         currentIndex = i;
-        bulletActive();
+        carouselActive();
     });
 
     dotsContainer.appendChild(dot);
@@ -59,7 +59,7 @@ function goToNextSlide() {
     } else {
         currentIndex = 0; 
     }
-    bulletActive();
+    carouselActive();
 }
 
 function goToPrevSlide() {
@@ -68,10 +68,10 @@ function goToPrevSlide() {
     } else {
         currentIndex = slides.length - 1;
     }
-    bulletActive();
+    carouselActive();
 }
 
 arrowLeft.addEventListener("click", goToPrevSlide);
 arrowRight.addEventListener("click", goToNextSlide);
 
-bulletActive();
+carouselActive();
